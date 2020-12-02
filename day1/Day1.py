@@ -21,6 +21,8 @@ class TwoSum:
                 bignums.append(int(number))
             else:
                 littlenums.append(int(number))
+        bignums.sort()
+        littlenums.sort()
         return bignums, littlenums
 
     def addnums(self, bignums, littlenums):
@@ -62,10 +64,5 @@ nums = instance.readinput()
 bignums, littlenums = instance.splitnums(nums)
 num1, num2 = instance.addnums(bignums, littlenums)
 answer1 = instance.multnums(num1, num2)
-print("The two numbers that sum to 2020 are: " + str(num1) + " & " + str(num2) +
-      "\nThose two numbers multiplied together are: " + str(answer1))
 threenums = instance.findthreesum(littlenums)
 answer2 = instance.multthreenums(threenums)
-print("\nThe three numbers that sum to 2020 are: " + str(threenums[0]) + " & "
-      + str(threenums[1]) + " & " + str(threenums[2]) +
-      "\nThose three numbers multiplied together are: " + str(answer2))
